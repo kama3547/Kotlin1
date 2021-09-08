@@ -18,9 +18,6 @@ class ActivitySecond : AppCompatActivity() {
 
         binding.txtT.text = intent.getStringExtra(GET_TEXT).toString()
         binding.btn2.setOnClickListener {
-            if (binding.txtT.text.trim().toString().isEmpty()
-            ) {
-            } else {
                 startActivity(
                     Intent(this, MainActivity::class.java).putExtra(
                         GET_TEXT,
@@ -30,4 +27,4 @@ class ActivitySecond : AppCompatActivity() {
             }
         }
         }
-    }
+

@@ -9,7 +9,7 @@ import com.example.kotlin1.databinding.ActivitySecondBinding
 
 class ActivitySecond : AppCompatActivity() {
 
-    lateinit var binding : ActivitySecondBinding
+    lateinit var binding: ActivitySecondBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,15 +20,17 @@ class ActivitySecond : AppCompatActivity() {
         binding.btn2.setOnClickListener {
             if (binding.editTxt2.text.trim().toString().isEmpty()
             ) {
-                Toast.makeText(this, "EditText не может быть пустым",Toast.LENGTH_SHORT).show()
-            }else{
-                startActivity(Intent(this, MainActivity::class.java)
-                    .putExtra(GET_TEXT2,binding.editTxt2.text.toString()))
+                Toast.makeText(this, "EditText не может быть пустым", Toast.LENGTH_SHORT).show()
+            } else {
+                startActivity(
+                    Intent(this, MainActivity::class.java)
+                        .putExtra(GET_TEXT2, binding.editTxt2.text.toString())
+                )
             }
         }
     }
 
-    companion object{
+    companion object {
         const val GET_TEXT2 = "data2"
     }
-    }
+}

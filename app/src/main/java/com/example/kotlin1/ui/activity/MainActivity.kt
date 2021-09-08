@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.kotlin1.ui.activity.ActivitySecond.Companion.GET_TEXT2
 import com.example.kotlin1.databinding.ActivityMainBinding
 import com.example.kotlin1.databinding.ActivitySecondBinding
 
@@ -18,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.txt2.text = intent.getStringExtra(GET_TEXT2) ?: ""
+        binding.txt2.text = intent.getStringExtra(GET_TEXT) ?: ""
         binding.btnB.setOnClickListener {
             if (binding.editTxt.text.trim().toString().isEmpty()
             ) {

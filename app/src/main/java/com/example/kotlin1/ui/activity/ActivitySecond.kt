@@ -18,19 +18,16 @@ class ActivitySecond : AppCompatActivity() {
 
         binding.txtT.text = intent.getStringExtra(GET_TEXT).toString()
         binding.btn2.setOnClickListener {
-            if (binding.editTxt2.text.trim().toString().isEmpty()
+            if (binding.txtT.text.trim().toString().isEmpty()
             ) {
-                Toast.makeText(this, "EditText не может быть пустым", Toast.LENGTH_SHORT).show()
             } else {
                 startActivity(
-                    Intent(this, MainActivity::class.java)
-                        .putExtra(GET_TEXT2, binding.editTxt2.text.toString())
+                    Intent(this, MainActivity::class.java).putExtra(
+                        GET_TEXT,
+                        binding.txtT.text.toString()
+                    )
                 )
             }
         }
+        }
     }
-
-    companion object {
-        const val GET_TEXT2 = "data2"
-    }
-}

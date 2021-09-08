@@ -16,21 +16,12 @@
         android:textColor="@color/black"
         android:textSize="20dp" />
 
-    <EditText
-        android:id="@+id/edit_txt2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="50dp"
-        android:textColor="@color/black" />
-
     <Button
         android:id="@+id/btn_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/edit_txt2"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="300dp"
         android:layout_marginEnd="50dp"
         android:text="Вернуться на 1ое Активити" />
 
